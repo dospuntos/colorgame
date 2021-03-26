@@ -104,13 +104,9 @@ function startGame() {
 
 function endGame() {
   jQuery(".time").html(
-    "<p>Felicidades, lograste " +
-      points +
-      " puntos.<br>Fallaste " +
-      noPoints +
-      " veces.</p><p>Tu puntaje final es " +
-      (points - noPoints) +
-      ".</p>"
+    `<p>Felicidades, lograste ${points} puntos.<br>
+        Fallaste ${noPoints} ${noPoints !== 1 ? "veces" : "vez"}</p>
+        <p><strong>Tu puntaje final es ${points - noPoints}.</strong></p>`
   );
   $answer.attr("disabled", true);
   $(".start-game").attr("disabled", false);
