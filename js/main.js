@@ -132,11 +132,6 @@ function checkHighscores(points, highscores) {
   }
 }
 
-function myFunction(item, index) {
-  message += index + ":" + item + "\n";
-  alert(message);
-}
-
 function addHighscore(points) {
   var name = prompt("¿Que te llamas?");
   var highscores = {
